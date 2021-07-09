@@ -1,0 +1,63 @@
+$desktop_layout_width: 1440;
+$mobile_layout_width: 640;
+$base_rem: 24px;
+
+//桌面版相对单位
+@function d-vw($target) {
+    $vw-context: ($desktop_layout_width*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+}
+
+//移动版相对单位
+@function m-vw($target) {
+    $vw-context: ($mobile_layout_width*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+}
+
+//全局相对单位
+@function rem($target) {
+    @return ($target/$base_rem) * 1rem;
+}
+
+html {
+    font-size: d-vw($base_rem);
+}
+
+body {
+    margin: 0;
+}
+
+.pc-view {
+    display: block !important;
+}
+
+.mobile-view {
+    display: none !important;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: m-vw($base_rem);
+    }
+
+    .pc-view {
+        display: none !important;
+    }
+
+    .mobile-view {
+        display: block !important;
+    }
+}
+
+@import './app';

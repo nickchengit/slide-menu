@@ -1,0 +1,89 @@
+.map-content {
+    position: relative;
+    height: 100vh;
+    background-color: #faebd7;
+    overflow: hidden;
+}
+
+.show-detail-btn {
+    position: absolute;
+    left: 50%;
+    top: rem(20px);
+    transform: translateX(-50%);
+}
+
+.detail-wrapper {
+    background-color: #ffffff;
+    border-top: 1px solid #cbcbcb;
+    border-top-left-radius: rem(8px);
+    border-top-right-radius: rem(8px);
+    height: rem(1020px);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: rem(30px);
+    padding-top: rem(80px);
+    // transform: translate3d(0, 0, 0);
+    // box-shadow: 0px 0px rem(15px) 1px #e5e5e5;
+    // overflow: auto;
+}
+
+/* detail penal 主要过渡动画 */
+.open-detail {
+    transition: .3s transform;
+    transform: translate3d(0, 30vh, 0);
+    box-shadow: 0px 0px rem(15px) 1px #e5e5e5;
+}
+
+.slide-down-hide-detail {
+    transition: .3s transform;
+    transform: translate3d(0, 100%, 0);
+    box-shadow: none;
+}
+
+.slide-up-sticky-detail {
+    transition: .3s transform;
+    transform: translate3d(0, 0, 0);
+    box-shadow: none;
+    border-radius: initial;
+    overflow: auto;
+}
+
+.panmoving {
+    transition: unset;
+}
+
+.item {
+    display: flex;
+    &:not(:first-child) {
+        margin-top: rem(30px);
+    }
+}
+
+.infos {
+    flex-grow: 1;
+    padding-left: rem(25px);
+}
+
+.img-place,
+.txt-place {
+    background-color: #ced6e0;
+}
+
+.img-place {
+    width: rem(220px);
+    height: rem(150px);
+}
+
+.txt-place {
+    width: 100%;
+    height: rem(20px);
+    margin-bottom: rem(20px);
+}
+
+.w-60 {
+    width: 60%;
+}
+.w-50 {
+    width: 50%;
+}
