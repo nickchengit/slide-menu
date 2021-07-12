@@ -21,4 +21,4 @@ npm run lint
 ```
 
 ### Demo
-[demo](https://nickchengit.github.io/slide-menu/).
+[demo](https://nickchengit.github.io/slide-menu/)
